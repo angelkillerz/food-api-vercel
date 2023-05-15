@@ -4,7 +4,8 @@ const {getFoods, insertFood} = require('../Controller/foodController')
 
 //Route
 
-router.route('/').get(getFoods)
-                 .post(insertFood);
+router.route('/create').post(insertFood)
+router.route('/get').get(getFoods)
+                 
 
 module.exports = router;
