@@ -13,7 +13,7 @@ app.use(cors());
 //url encoded data
 app.use(express.urlencoded({ extended: false }));
 //built in middleware for json
-app.use(express.json());
+app.use(express.json({extended: false}));
 
 
 app.use('/api/foods', require('./routes/foodRoute'))
