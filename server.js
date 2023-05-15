@@ -11,6 +11,10 @@ app.use(express.urlencoded({ extended: false }));
 
 app.use('/api/foods', require('./routes/foodRoute'))
 
+app.get('/show', (req, res) => {
+    res.send('Hello World');
+})
+
 
 app.listen(PORT, () => {
     console.log(`Server is running at ${PORT}`);
