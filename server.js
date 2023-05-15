@@ -3,12 +3,11 @@ const express = require('express');
 const connectDb = require('./config/dbConnection');
 const app = express();
 const cors = require('cors');
-const corsOptions = require('./config/corsOptions');
 const PORT = process.env.PORT || 5900;
 
 connectDb();
 //cross origin
-app.use(cors(corsOptions));
+app.use(cors());
 //url encoded data
 app.use(express.urlencoded({ extended: false }));
 //built in middleware for json
