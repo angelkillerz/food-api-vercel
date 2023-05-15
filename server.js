@@ -1,9 +1,11 @@
 const dotenv = require('dotenv');
 const express = require('express');
 const connectDb = require('./config/dbConnection');
+const PORT = process.env.PORT || 5900;
+
 const app = express();
 const cors = require('cors');
-const PORT = process.env.PORT || 5900;
+
 
 connectDb();
 //cross origin
