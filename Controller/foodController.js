@@ -17,6 +17,19 @@ const getFoods = async (req, res) => {
     }
 };
 
+//desc getOneFood
+
+const getOneFood = async (req, res) => {
+    try {
+        const food = await Food.findById(req.params.id);
+        console.log(food);
+        res.json(food);
+    } catch(err) {
+        console.log(err);
+        res.status(500).send('Server Error');
+    }
+}
+
 //desc createFood
 
 const insertFood = async (req, res) => {
