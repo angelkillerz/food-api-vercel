@@ -6,7 +6,7 @@ const {getFoods, insertFood, getOneFood} = require('../Controller/foodController
 
 router.route('/create').post(insertFood)
 router.route('/get').get(getFoods)
-router.route('/get/:id').get(getOneFood)
+router.route('/get/:name').get(getOneFood)
                  
 
 module.exports = router;

@@ -21,7 +21,7 @@ const getFoods = async (req, res) => {
 
 const getOneFood = async (req, res) => {
     try {
-        const food = await Food.findById(req.params.id);
+        const food = await Food.findOne({name: req.params.id});
         console.log(food);
         res.json(food);
     } catch(err) {
