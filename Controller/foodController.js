@@ -66,5 +66,6 @@ const insertFood = async (req, res) => {
 
 module.exports = {
     getFoods,
-    insertFood
+    insertFood,
+    getOneFood
 }
