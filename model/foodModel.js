@@ -42,7 +42,7 @@ const foodSchema = new mongoose.Schema({
     meal: {
         type: String,
     },
-    type: {
+    genere: {
         type: String,
     }
     ,
