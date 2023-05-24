@@ -33,8 +33,8 @@ const getOneFood = async (req, res) => {
 //desc createFood
 
 const insertFood = async (req, res) => {
-    const { name, image, rating, kcal, meal, ingredients, howto } = req.body;
-    if (!name || !image || !rating || !kcal || !meal || !ingredients || !howto) {
+    const { name, image, rating, kcal,genere, meal, ingredients, howto } = req.body;
+    if (!name || !image || !rating || !kcal || !genere || !meal || !ingredients || !howto) {
         res.status(400)
         throw new Error('All fields are required')
     }
