@@ -44,7 +44,7 @@ const foodSchema = new mongoose.Schema({
     },
     genere: {
         type: String,
-        required: true
+        
     },
 
     ingredients: {

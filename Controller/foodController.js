@@ -47,6 +47,7 @@ const insertFood = async (req, res) => {
             image,
             rating,
             kcal,
+            genere,
             meal,
             ingredients,
             howto
