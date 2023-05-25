@@ -21,7 +21,8 @@ const getFoods = async (req, res) => {
 
 const getOneFood = async (req, res) => {
     try {
-        const food = await Food.findOne({name: req.params.id});
+        const name = req.params.name.replace(/-/g, " "); // Replace hyphens with spaces
+        const food = await Food.findOne({name: new RegExp('^' + name + '$', 'i')}); // Case-insensitive search
         console.log(food);
         res.json(food);
     } catch(err) {
